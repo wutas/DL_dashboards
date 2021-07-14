@@ -1,0 +1,12 @@
+version: "3.3"
+
+services:
+  web:
+    restart: always
+    image: summ
+    command: streamlit run main.py
+    volumes:
+      - .:/code
+    ports:
+      - "8003:8501"
+
